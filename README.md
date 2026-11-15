@@ -23,6 +23,11 @@ Kør test, og vis mig ændringerne.
 Du må ikke markere Issue som Done – det gør jeg selv. 
 ```
 
+# FEJL 
+- Jeg kiggede på koden agenten implementerede.
+- Derefter klikkede jeg på "Keep all".
+- Derfor blev der ikke dannet nogen pull request med Issue #1.
+
 # Efter implementering af et Issue
 - Start programmet.
 - Test i Postman.
