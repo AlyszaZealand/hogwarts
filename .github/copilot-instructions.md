@@ -23,6 +23,7 @@ project-root/
 
 - Brug JavaScript (Node.js).
 - Brug mongodb som database.
+- mongodb collection hedder hogwarts.
 - Hold løsningen enkel og forståelig.
 
 ## GitHub workflow
