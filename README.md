@@ -27,6 +27,9 @@ Du må ikke markere Issue som Done – det gør jeg selv.
 - Jeg kiggede på koden agenten implementerede.
 - Derefter klikkede jeg på "Keep all".
 - Derfor blev der ikke dannet nogen pull request med Issue #1.
+- Der kom først pull request efter commit fra webstorm.
+<img width="923" height="115" alt="Screenshot 2026-11-15 182756" src="https://github.com/user-attachments/assets/e9c97554-cd84-4129-a020-af8117acfbd6" />
+
 
 # Efter implementering af et Issue
 - Start programmet.
