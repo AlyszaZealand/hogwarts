@@ -1,12 +1,33 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const app = express();
+const { seedBooks } = require('./repositories/bookRepository');
+const createBookRoutes = require('./routes/bookRoutes');
 
-mongoose.connect('mongodb://127.0.0.1:27017/hogwarts')
-    .then(() => console.log('MongoDB tilsluttet'))
-    .catch(err => console.error('MongoDB fejl:', err));
+function createApp(bookService) {
+    const app = express();
 
+    app.use(express.json());
+    app.use(morgan('dev'));
+    app.use('/api/books', createBookRoutes(bookService));
 
+    return app;
+}
 
-app.listen(3000, () => console.log('Server klar på http://localhost:3000/api/'));
+async function startServer() {
+    await mongoose.connect('mongodb://127.0.0.1:27017/hogwarts');
+    await seedBooks();
+    console.log('MongoDB tilsluttet');
+
+    const app = createApp();
+    app.listen(3000, () => console.log('Server klar på http://localhost:3000/api/'));
+}
+
+if (require.main === module) {
+    startServer().catch(err => {
+        console.error('MongoDB fejl:', err);
+        process.exitCode = 1;
+    });
+}
+
+module.exports = { createApp };
