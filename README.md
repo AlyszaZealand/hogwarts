@@ -14,6 +14,20 @@ project-root/
 └── README.md            # Project documentation
 ```
 
+# Brug denne instruktion til agenten for hvert Issue:
+```
+Læs GitHub Issue #X og undersøg projektet. 
+Forklar først kort, hvilke filer du vil ændre. 
+Implementer kun dette Issue og respekter lagdelingen. 
+Kør test, og vis mig ændringerne. 
+Du må ikke markere Issue som Done – det gør jeg selv. 
+```
+
+# Efter implementering af et Issue
+- Start programmet.
+- Test i Postman.
+- Derefter flyt Issue til Done.
+
 # Lav Scrum Board/Issues
 - Lav et Scrum board i GitHub Project.
 - Lav kolonnerne: Product Backlog, Sprint Backlog, In progress, Review, Done.
@@ -39,22 +53,6 @@ data ligger i MongoDB.
 ## Afgrænsning
 
 Der skal ikke implementeres nogen brugerflade.
-```
-
-# tilføj GitHub MCP
-Slettes måske.
-```
-{
-  "servers": {
-    "github": {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/",
-      "headers": {
-        "X-MCP-Toolsets": "default,projects"
-      }
-    }
-  }
-}
 ```
 
 # Kontroller om MCP er tilgængelig
