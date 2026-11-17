@@ -54,13 +54,9 @@ data ligger i MongoDB.
 Der skal ikke implementeres nogen brugerflade.
 ```
 
-# Efter implementering af et Issue fra agenten
-- Start programmet.
-- Test i Postman.
-- Derefter flyt Issue fra In Review til Done.
-
 # Kontroller om MCP er tilgængelig
 - Dette er skrevet ind i Copilot projekt regler som et punkt.
+- Dette kontrolleres ved at markerer copilot-instructions.md filen.
 - Ellers kan agenten ikke rykke issues til Sprint Backlog, In Progress og In Review.
 ```
 GitHub-adgang (tjek først ved hver session)
@@ -166,8 +162,12 @@ project-root/
 - Alle ændringer skal kunne spores tilbage til et Issue
 ```
 
-# Review og merge af pull request / DONE
-Åben pull requesten i GitHub og gennemgå ændringerne.
+# Efter implementering af et Issue fra agenten
+- Start programmet.
+- Test i Postman.
+- Åben pull requesten i GitHub og gennemgå ændringerne.
+- Derefter Merge den specifikke issue branch ind til master branch.
+- Dette får Issue fra In Review til Done.
 
 
 
