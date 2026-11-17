@@ -169,16 +169,28 @@ project-root/
 - Derefter Merge den specifikke issue branch ind til master branch.
 - Dette får Issue fra In Review til Done.
 
-# TEST
+# Postman TEST:
 | Metode | URL | Formål | Succes |
 | --- | --- | --- | --- |
-| GET | `/api/characters` | Alle karakterer | 200 |
-| GET | `/api/characters?name=Doctor` | Søg efter navn | 200 |
-| GET | `/api/characters/:id` | En karakter | 200 |
-| POST | `/api/characters` | Opret karakter | 201 + Location |
-| PUT | `/api/characters/:id` | Opdater felter (delvis opdatering i denne demo) | 200 |
-| DELETE | `/api/characters/:id` | Slet karakter | 204 uden body |
-| GET | `/api/external/shows` | Søg efter Doctor Who-serier på TVmaze | 200 |
+| GET | `/api/books` | Vis alle bøger  | 200 |
+| POST | `/api/books` | Opret en bog  | 201 |
+| POST | `/api/books/:id/borrow` | Lån en bog til en elev | 200 |
+| POST | `POST /api/books/:id/return` | Aflever en bog igen (ekstra, hvis I når det) | 404 |
 
+Ved et udlån sender I fx: 
+```
+{
+  "studentName": "Hermione Granger"
+} 
+```
+
+# Code review med en AI-agent
+- Bed agenten om et review – den må ikke ændre koden endnu:
+- Gennemgå mit Hogwarts-API som erfaren Node.js-udvikler.
+- Find højst tre konkrete problemer i arkitektur,
+- fejlhåndtering eller test. Angiv fil og forklaring.
+- Ret ikke noget. Jeg vælger selv, hvad der ændres.
+- Vælg én forbedring, ret den (selv eller med agent), og test igen.
+- Skriv to sætninger i README: Hvad fandt agenten? Hvorfor valgte I at rette det? 
 
 
