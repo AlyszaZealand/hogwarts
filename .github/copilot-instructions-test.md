@@ -72,6 +72,20 @@ project-root/
 - Merge aldrig uden menneskelig godkendelse
 - Flyt **aldrig** selv et Issue til **Done** – Review og Done kræver menneskelig godkendelse
 
+### 7. Lokal synkronisering efter merge
+- Når brugeren har merget pull requesten på GitHub (eller agenten kan se, at PR'en er merged),
+  så tjek om lokal `master` har opdateringer klar fra remote
+- Hvis `master` har opdateringer klar (fx "↓ 4" i IDE):
+  1. Underret brugeren, fx: "Master har X opdateringer klar efter merge af PR'en.
+     Skal jeg rykke til master-branchen og pulle ændringerne ned?"
+  2. Vent på brugerens godkendelse, før du skifter branch eller kører `git pull`
+- Efter godkendelse: skift lokalt til `master`, kør `git pull`, og underret brugeren om,
+  at IDE nu står på opdateret `master`
+- Spørg derefter brugeren, om den lokale issue-branch skal slettes, og slet den kun efter godkendelse
+- Brugeren skal aldrig selv skifte branch eller pulle i IDE/terminalen – men agenten spørger
+  altid først og venter på godkendelse, før den skifter branch eller puller
+- Arbejd aldrig videre på en gammel issue-branch efter dens PR er merged
+
 ## Kvalitet
 - AI-genereret kode er ikke automatisk korrekt
 - Koden skal kunne forklares, testes og reviewes af udvikleren
