@@ -169,7 +169,16 @@ project-root/
 - Derefter Merge den specifikke issue branch ind til master branch.
 - Dette får Issue fra In Review til Done.
 
-
+# TEST
+| Metode | URL | Formål | Succes |
+| --- | --- | --- | --- |
+| GET | `/api/characters` | Alle karakterer | 200 |
+| GET | `/api/characters?name=Doctor` | Søg efter navn | 200 |
+| GET | `/api/characters/:id` | En karakter | 200 |
+| POST | `/api/characters` | Opret karakter | 201 + Location |
+| PUT | `/api/characters/:id` | Opdater felter (delvis opdatering i denne demo) | 200 |
+| DELETE | `/api/characters/:id` | Slet karakter | 204 uden body |
+| GET | `/api/external/shows` | Søg efter Doctor Who-serier på TVmaze | 200 |
 
 
 
