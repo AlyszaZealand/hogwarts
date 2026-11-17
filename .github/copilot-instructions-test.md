@@ -16,6 +16,15 @@ project-root/
 
 # Projekt Titel - Hogwarts
 
+## GitHub-adgang (tjek først ved hver session)
+- Kontrollér straks ved sessionens start, om GitHub CLI/MCP har de nødvendige scopes
+- Kør `gh auth status` – tokenet skal indeholde scopes: `repo`, `read:project` og `project`
+- Hvis `read:project` eller `project` mangler, så stop og bed brugeren om at køre:
+  `gh auth refresh -h github.com -s project,read:project`
+  og gennemføre godkendelsen med engangskoden i browseren med det samme (koden udløber hurtigt)
+- Fortsæt først, når brugeren har bekræftet, at scopes er tilføjet, og `gh auth status` viser dem
+- Agenten kan selv flytte issue-status i GitHub Project via MCP – men aldrig til Done
+
 ## Projekt
 - Node.js-applikation med en REST API
 - Database: MongoDB – collection hedder `hogwarts`
