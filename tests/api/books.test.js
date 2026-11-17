@@ -139,3 +139,31 @@ test('borrowing an already borrowed book returns 409', async () => {
     assert.equal(response.status, 409);
     assert.equal(body.error, 'Book is already borrowed');
 });
+
+test('unexpected server errors return 500 and the server stays available', async () => {
+    let requestCount = 0;
+    const server = http.createServer(createApp({
+        listBooks: async () => {
+            requestCount += 1;
+            if (requestCount === 1) {
+                throw new Error('database connection failed');
+            }
+            return initialBooks;
+        }
+    }));
+
+    await new Promise(resolve => server.listen(0, resolve));
+    const { port } = server.address();
+
+    const firstResponse = await fetch(`http://127.0.0.1:${port}/api/books`);
+    const firstBody = await firstResponse.json();
+    const secondResponse = await fetch(`http://127.0.0.1:${port}/api/books`);
+    const secondBody = await secondResponse.json();
+
+    await new Promise(resolve => server.close(resolve));
+
+    assert.equal(firstResponse.status, 500);
+    assert.equal(firstBody.error, 'Internal server error');
+    assert.equal(secondResponse.status, 200);
+    assert.deepEqual(secondBody, initialBooks);
+});
