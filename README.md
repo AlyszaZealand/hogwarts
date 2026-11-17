@@ -60,8 +60,8 @@ Der skal ikke implementeres nogen brugerflade.
 - Derefter flyt Issue fra In Review til Done.
 
 # Kontroller om MCP er tilgængelig
-Dette er skrevet ind i Copilot projekt regler som et punkt.
-Ellers kan agenten ikke rykke issues til Sprint Backlog, In Progress og In Review.
+- Dette er skrevet ind i Copilot projekt regler som et punkt.
+- Ellers kan agenten ikke rykke issues til Sprint Backlog, In Progress og In Review.
 ```
 GitHub-adgang (tjek først ved hver session)
 Instruktion...
