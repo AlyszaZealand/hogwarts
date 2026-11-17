@@ -15,7 +15,16 @@ function createApp(bookService) {
             return next(error);
         }
 
-        res.status(error.statusCode || 500).json({ error: error.message });
+        const statusCode = Number.isInteger(error.statusCode)
+            && error.statusCode >= 400
+            && error.statusCode < 600
+            ? error.statusCode
+            : 500;
+        const message = statusCode === 500
+            ? 'Internal server error'
+            : error.message;
+
+        res.status(statusCode).json({ error: message });
     });
 
     return app;
