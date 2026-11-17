@@ -14,7 +14,7 @@ project-root/
 └── README.md            # Project documentation
 ```
 
-# Hogwarts
+# Projekt Titel - Hogwarts
 
 ## Projekt
 - Node.js-applikation med en REST API
