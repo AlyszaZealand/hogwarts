@@ -41,13 +41,17 @@ Når du arbejder med en udviklingsopgave:
 9. Vent på brugerens godkendelse af planen.
 10. Flyt Issue til In progress, når implementeringen starter.
 11. Opret en separat branch til Issue.
-12. Implementer kun det valgte Issue.
-13. Kør relevante test efter implementering.
-14. Kontroller alle acceptkriterier.
-15. Referer Issue-nummeret i pull requesten.
-16. Flyt Issue til Review, når pull requesten er klar.
-17. Merge ikke uden menneskelig godkendelse.
-18. Flyt ikke selv et Issue til Done uden menneskelig godkendelse.
+12. Commit og push alle ændringer til Issue-branchen, når brugeren
+    har godkendt koden ("Keep all").
+13. Brug en commit-besked, der refererer Issue-nummeret, fx "Closes #1: ...".
+14. Push til remote, så en pull request kan oprettes.
+15. Implementer kun det valgte Issue. 
+16. Kør relevante test efter implementering. 
+17. Kontroller alle acceptkriterier. 
+18. Referer Issue-nummeret i pull requesten. 
+19. Flyt Issue til Review, når pull requesten er klar. 
+20. Merge ikke uden menneskelig godkendelse. 
+21. Flyt ikke selv et Issue til Done uden menneskelig godkendelse.
 
 ## Kvalitet
 
