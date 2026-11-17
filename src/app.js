@@ -10,6 +10,13 @@ function createApp(bookService) {
     app.use(express.json());
     app.use(morgan('dev'));
     app.use('/api/books', createBookRoutes(bookService));
+    app.use((error, req, res, next) => {
+        if (res.headersSent) {
+            return next(error);
+        }
+
+        res.status(error.statusCode || 500).json({ error: error.message });
+    });
 
     return app;
 }

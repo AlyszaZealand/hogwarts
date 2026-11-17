@@ -30,6 +30,13 @@ project-root/
 
 Når du arbejder med en udviklingsopgave:
 
+Flyt Issue til In progress, hvis det ikke allerede er der.
+Commit/push først efter brugerens godkendelse af ændringerne.
+Opret PR efter commit/push.
+Flyt Issue til Review, når PR er oprettet.
+Review og Done kræver menneskelig godkendelse.
+Må ikke flytte Issue automatisk til Done.
+
 1. Brug et rigtigt GitHub Issue som kilde til opgaven.
 2. Hent GitHub Issue gennem GitHub MCP.
 3. Brug ikke README eller lokale markdown-filer som erstatning for et GitHub Issue.

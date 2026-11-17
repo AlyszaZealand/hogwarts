@@ -29,7 +29,7 @@ Du må ikke markere Issue som Done – det gør jeg selv.
 - Derfor blev der ikke dannet nogen pull request med Issue #1.
 - Der kom først pull request efter commit fra webstorm.
 <img width="923" height="115" alt="Screenshot 2026-11-15 182756" src="https://github.com/user-attachments/assets/e9c97554-cd84-4129-a020-af8117acfbd6" />
-
+- Husk at tage issue til Sprint Backlog og Assign til dig selv, før du implementerer.
 
 # Efter implementering af et Issue
 - Start programmet.
