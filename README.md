@@ -23,6 +23,16 @@ Kør test, og vis mig ændringerne.
 Du må ikke markere Issue som Done – det gør jeg selv. 
 ```
 
+# TEST: Brug denne instruktion til agenten for hvert Issue:
+```
+Læs GitHub Issue #X og undersøg projektet.
+Forklar først kort, hvilke filer du vil ændre, og vent på min godkendelse af planen, før du implementerer.
+Implementer kun dette Issue og respekter lagdelingen.
+Lav test, der dækker acceptkriterierne, kør dem og vis mig ændringerne.
+Commit og push først, når jeg har skrevet "Keep all" – opret derefter en PR, der refererer issuet, og flyt issuet til Review.
+Du må ikke markere issuet som Done – det gør jeg selv.
+```
+
 # FEJL 
 - Jeg kiggede på koden agenten implementerede.
 - Derefter klikkede jeg på "Keep all".
