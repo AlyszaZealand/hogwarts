@@ -1,4 +1,6 @@
-# Arkitektur og mappestruktur
+# Projekt Titel - Hogwarts
+
+## Arkitektur og mappestruktur
 ```
 project-root/
 ├── src/
@@ -14,15 +16,20 @@ project-root/
 └── README.md            # Project documentation
 ```
 
-# Projekt Titel - Hogwarts
-
 ## GitHub-adgang (tjek først ved hver session)
-- Kontrollér straks ved sessionens start, om GitHub CLI/MCP har de nødvendige scopes
-- Kør `gh auth status` – tokenet skal indeholde scopes: `repo`, `read:project` og `project`
-- Hvis `read:project` eller `project` mangler, så stop og bed brugeren om at køre:
-  `gh auth refresh -h github.com -s project,read:project`
-  og gennemføre godkendelsen med engangskoden i browseren med det samme (koden udløber hurtigt)
-- Fortsæt først, når brugeren har bekræftet, at scopes er tilføjet, og `gh auth status` viser dem
+- Kontrollér straks ved sessionens start, om GitHub CLI/MCP har de nødvendige scopes:
+  kør `gh auth status` – tokenet skal indeholde scopes: `repo`, `read:project` og `project`
+- Hvis `read:project` eller `project` mangler, så følg denne procedure:
+  1. Kør selv `gh auth refresh -h github.com -s project,read:project`
+  2. Vis brugeren engangskoden og linket (https://github.com/login/device)
+     og bed brugeren om at åbne linket i browseren, taste koden og klikke Authorize
+  3. Underret tydeligt, at dette skal ske med det samme, mens kommandoen stadig kører –
+     koden er engangs og udløber hurtigt
+  4. Når brugeren har bekræftet godkendelsen i browseren, så kør `gh auth status`
+     igen for at kontrollere, at scopes nu vises
+  5. Fortsæt først, når scopes vises
+- Hvis koden udløber eller ikke blev godkendt i tide (fx "koden blev ikke autoriseret"):
+  kør refresh-kommandoen igen med en ny kode og giv brugeren den nye kode og det samme link
 - Agenten kan selv flytte issue-status i GitHub Project via MCP – men aldrig til Done
 
 ## Projekt
